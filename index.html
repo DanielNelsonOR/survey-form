@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">     
+        <title>Pet Survey Form</title>
+    </head>
+    <body>
+        <h1 id=title>
+            Pet Survey Form
+        </h1>
+        <p id="description">
+            <i>Tell us about your pets!</i>
+        </p>
+        <div>
+            <form id="survey-form">
+                <label id="name-label" for="name">Name</label><br>
+                <input type="text" id="name" placeholder="Enter your name here" required><br>
+                <label id="email-label" for="email">Email</label><br>
+                <input type="email" id="email" placeholder="Enter your email here"><br>
+                <label id="number-label" for="number">How many pets do you have?</label><br>
+                <input type="number" id="number" placeholder="Enter the number of pets you have here" min="0" max="10000"><br>
+                Do you have a favorite pet?<br>
+                <input type="radio" id="pet-yes" name="radio" value="yes">
+                <label for="pet-yes">Yes</label><br>
+                <input type="radio" id="pet-no" name="radio" value="no">
+                <label for="pet-no">No</label><br>
+                <label for="dropdown">If yes, what kind of pet is it?</label><br>
+                <select id="dropdown" name="kind-of-pet">
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="bird">Bird</option>
+                    <option value="rat">Rat</option>
+                    <option value="pig">Pig</option>
+                    <option value="other">Other</option>
+                </select><br>
+                Which kind of pet do you want most? (Check all that apply)<br>
+                <input type="checkbox" id="dog" name="check-dog" value="dog">
+                <label for="dog">Dog</label><br>
+                <input type="checkbox" id="cat" name="check-cat" value="cat">
+                <label for="cat">Cat</label><br>
+                <input type="checkbox" id="bird" name="check-bird" value="bird">
+                <label for="bird">Bird</label><br>
+                <input type="checkbox" id="rat" name="check-rat" value="rat">
+                <label for="rat">Rat</label><br>
+                <input type="checkbox" id="pig" name="check-pig" value="pig">
+                <label for="pig">Pig</label><br>
+                <input type="checkbox" id="other" name="check-other" value="other">
+                <label for="other">Other</label><br>
+                <input type="checkbox" id="none" name="check-none" value="none">
+                <label for="none">None</label><br>
+                Do you have any additional comments?<br>
+                <textarea name="comments" rows="10" cols="30">Write your comments here...</textarea><br>
+                <input type="submit" id="submit" value="Submit">
+            </form>
+        </div>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+</html>
