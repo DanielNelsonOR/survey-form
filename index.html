@@ -15,20 +15,32 @@
             <p id="description">
                 <i>Tell us about your pets!</i>
             </p>
-            <div>
-                <form id="survey-form">
-                    <label id="name-label" for="name">Name</label><br>
-                    <input type="text" id="name" placeholder="Enter your name here" required><br>
-                    <label id="email-label" for="email">Email</label><br>
-                    <input type="email" id="email" placeholder="Enter your email here" required><br>
-                    <label id="number-label" for="number">How many pets do you have?</label><br>
-                    <input type="number" id="number" placeholder="Enter the number of pets you have here" min="0" max="10000"><br>
-                    Do you have a favorite pet?<br>
-                    <input type="radio" id="pet-yes" name="radio" value="yes">
-                    <label for="pet-yes">Yes</label><br>
-                    <input type="radio" id="pet-no" name="radio" value="no">
-                    <label for="pet-no">No</label><br>
-                    <label for="dropdown">If yes, what kind of pet is it?</label><br>
+            <form id="survey-form">
+                <div class="form-group">
+                    <label id="name-label" for="name">Name</label>
+                    <input type="text" id="name" class="input" placeholder="Enter your name here" required>
+                </div>
+                <div class="form-group">
+                    <label id="email-label" for="email">Email</label>
+                    <input type="email" id="email" class="input" placeholder="Enter your email here" required>
+                </div>
+                <div class="form-group">
+                    <label id="number-label" for="number">How many pets do you have?</label>
+                    <input type="number" id="number" class="input" placeholder="Enter the number of pets you have here" min="0" max="10000">
+                </div>
+                <div class="form-group">    
+                    <p>Do you have a favorite pet?</p>                     
+                    <div>
+                        <label for="favorite-pet-yes"><input type="radio" class="input-radio" name="favorite-pet-yes" value="yes">Yes</label>
+                    </div>
+                    <div>
+                        <label for="favorite-pet-no">
+                            <input type="radio" class="input-radio" name="favorite-pet-no" value="no">No
+                        </label>
+                    </div>    
+                </div>
+                <div class="form-group">
+                    <p>If yes, what kind of pet is it?</p>
                     <select id="dropdown" name="kind-of-pet">
                         <option disabled selected value="pet-type">Select your pet</option>
                         <option value="dog">Dog</option>
@@ -37,27 +49,40 @@
                         <option value="rat">Rat</option>
                         <option value="pig">Pig</option>
                         <option value="other">Other</option>
-                    </select><br>
-                    Which kind of pet do you want most? (Check all that apply)<br>
-                    <input type="checkbox" id="dog" name="check-dog" value="dog">
-                    <label for="dog">Dog</label><br>
-                    <input type="checkbox" id="cat" name="check-cat" value="cat">
-                    <label for="cat">Cat</label><br>
-                    <input type="checkbox" id="bird" name="check-bird" value="bird">
-                    <label for="bird">Bird</label><br>
-                    <input type="checkbox" id="rat" name="check-rat" value="rat">
-                    <label for="rat">Rat</label><br>
-                    <input type="checkbox" id="pig" name="check-pig" value="pig">
-                    <label for="pig">Pig</label><br>
-                    <input type="checkbox" id="other" name="check-other" value="other">
-                    <label for="other">Other</label><br>
-                    <input type="checkbox" id="none" name="check-none" value="none">
-                    <label for="none">None</label><br>
-                    Do you have any additional comments?<br>
-                    <textarea name="comments" rows="10" cols="30">Write your comments here...</textarea><br>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <p>Which kind of pet do you want most? (Check all that apply)</p>
+                    <div>
+                        <label for="dog"><input type="checkbox" class="input-checkbox" id="dog" name="check-dog" value="dog">Dog</label>
+                    </div>
+                    <div>
+                        <label for="cat"><input type="checkbox" class="input-checkbox" id="cat" name="check-cat" value="cat">Cat</label>
+                    </div>
+                    <div>
+                        <label for="bird"><input type="checkbox" class="input-checkbox" id="bird" name="check-bird" value="bird">Bird</label>
+                    </div>
+                    <div>
+                        <label for="rat"><input type="checkbox" id="rat" name="check-rat" value="rat">Rat</label>
+                    </div>
+                    <div>
+                        <label for="pig"><input type="checkbox" id="pig" name="check-pig" value="pig">Pig</label>
+                    </div>
+                    <div>
+                        <label for="other"><input type="checkbox" id="other" name="check-other" value="other">Other</label>
+                    </div>
+                    <div>
+                        <label for="none"><input type="checkbox" id="none" name="check-none" value="none">None</label>
+                    </div>                    
+                </div>
+                <div class="form-group">
+                    Do you have any additional comments?
+                    <textarea name="comments" rows="10" cols="50">Write your comments here...</textarea>
+                </div>
+                <div class="button">
                     <input type="submit" id="submit" value="Submit">
-                </form>
-            </div>
+                </div>     
+            </form>
         </div>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </body>
